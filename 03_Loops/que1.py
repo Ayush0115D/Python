@@ -1,8 +1,11 @@
 n = 10
 sum_even = 0
+count_even = 0
 
 for i in range(1, n+1):
-    if i%2 == 0:
-        sum_even += 1
+    if i % 2 == 0:
+        sum_even += i      
+        count_even += 1    
 
-print("Sum of even number is: , ", sum_even)
+print("Sum of even numbers is:", sum_even)
+print("Count of even numbers is:", count_even)
