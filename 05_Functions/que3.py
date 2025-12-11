@@ -7,4 +7,4 @@ def circle_stats(radius):
 
 a, c = circle_stats(3)
 
-print("Area: ", a, "Circumference: ", c)
+print("Area:", round(a, 2), "Circumference:", round(c, 2))
