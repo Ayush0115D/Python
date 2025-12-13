@@ -1,4 +1,4 @@
-username = "chaiaurcode"
+username = "chaiaurcode" # global scope
 
 def func():
     # username = "chai"
