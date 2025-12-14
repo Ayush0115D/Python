@@ -3,10 +3,11 @@ class Car:
     def __init__(self, brand, model):
         self.brand = brand
         self.model = model 
+        
         #q2
     def full_name(self):
         return f"{self.brand} {self.model}"
-        
+   #q3     
 class ElectricCar(Car):
         def __init__(self, brand, model, battery_size):
             super().__init__(brand, model)
