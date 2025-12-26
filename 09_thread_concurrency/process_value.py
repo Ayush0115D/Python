@@ -1,10 +1,9 @@
 from multiprocessing import Process, Value
-
+# Using Value to share data between processes
 def increment(counter):
     for _ in range(100000):
         with counter.get_lock():
             counter.value += 1
-
 
 if __name__ == "__main__":
     counter = Value('i', 0)
