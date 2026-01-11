@@ -1,11 +1,11 @@
-from pydantic  import BaseModel, Field
+from pydantic import BaseModel, Field, computed_field
 class Product(BaseModel):
     
     price: float
     quantity: int
 
-    @computed_property
-    @property
+    @computed_field
+   
     def total_price(self) -> float:
      return self.price * self.quantity
   
@@ -16,10 +16,10 @@ class Booking(BaseModel):
    rate_per_night: float
 
 
-   @computed_property
-   @property
-   def total_cost(self) -> float:
+   @computed_field
+   
+   def total_amount(self) -> float:
         return self.nights * self.rate_per_night
 booking=Booking(User_id=1, room_id=101, nights=3, rate_per_night=150.0)   
-print(f"Total booking cost: {booking.total_cost}")
-print(booking.model.dumps())
+print(booking.total_amount)
+print(booking.model_dump())

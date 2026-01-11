@@ -8,4 +8,9 @@ class BlogPost(BaseModel):
     title:str
     content:str
     imageurl:Optional[str]=None
-    
+cart_data={
+    "user_id":123,
+    "items":["mouse","laptop","keyboard"],
+    "quantity":{"mouse":2,"laptop":1,"keyboard":1}
+}    
+cart=Cart(**cart_data)
